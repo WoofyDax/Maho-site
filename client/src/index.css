@@ -295,6 +295,46 @@
     animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
 
+  /* Grid background pattern */
+  .grid-bg {
+    position: relative;
+    background-image: 
+      linear-gradient(rgba(250, 204, 21, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 204, 21, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Parallax scroll effect */
+  @keyframes parallaxScroll {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+  .parallax-element {
+    animation: parallaxScroll 6s ease-in-out infinite;
+  }
+
+  /* Stagger animation for cards */
+  @keyframes staggerIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stagger-1 { animation: staggerIn 0.6s ease-out 0.1s both; }
+  .stagger-2 { animation: staggerIn 0.6s ease-out 0.2s both; }
+  .stagger-3 { animation: staggerIn 0.6s ease-out 0.3s both; }
+  .stagger-4 { animation: staggerIn 0.6s ease-out 0.4s both; }
+
   /* Subtle pulse glow */
   @keyframes pulseGlow {
     0%, 100% {
@@ -306,6 +346,16 @@
   }
 
   .pulse-glow {
-    animation: pulseGlow 2s ease-in-out infinite;
+    animation: pulseGlow 2s infinite;
+  }
+
+  /* Underline animation */
+  .underline-animated {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: rgba(250, 204, 21, 0.6);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
   }
 }

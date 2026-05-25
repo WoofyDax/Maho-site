@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { Check, Users, Zap, Target, Award } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 
 /**
@@ -17,6 +17,7 @@ import { Header } from "@/components/Header";
 
 export default function ESL() {
   const [, setLocation] = useLocation();
+  const [scrollY, setScrollY] = useState(0);
 
   // Smooth scroll to Calendly section
   const scrollToCalendly = () => {
@@ -25,6 +26,16 @@ export default function ESL() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Track scroll position for parallax effects
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Scroll animation observer
   useEffect(() => {
@@ -48,24 +59,27 @@ export default function ESL() {
       <Header />
 
       {/* SECTION 1: HERO */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 opacity-0 animate-fade-in bg-black">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 opacity-0 animate-fade-in bg-black grid-bg">
         {/* Background gradient glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
+          <div 
+            className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-yellow-600/10 to-transparent rounded-full blur-3xl"
+            style={{ transform: `translate(-50%, calc(-50% + ${scrollY * 0.3}px))` }}
+          ></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Logo */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12" style={{ transform: `translateY(${scrollY * 0.1}px)` }}>
             <img src="/manus-storage/maho-logo_64d5e184.png" alt="Maho Fitness" className="w-20 h-20 rounded-full shadow-lg shadow-yellow-500/30" />
           </div>
 
-          {/* Main headline with gold accent */}
-          <h1 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
+          {/* Main headline with gold accent and underline */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 leading-tight" style={{ transform: `translateY(${scrollY * 0.05}px)` }}>
             We Help Busy Men{" "}
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg -skew-x-12 opacity-25 blur-sm"></span>
-              <span style={{ fontFamily: 'var(--font-cursive)' }} className="relative text-yellow-400 text-7xl font-light">Transform</span>
+              <span style={{ fontFamily: 'var(--font-cursive)' }} className="relative text-yellow-400 text-7xl md:text-8xl font-light underline-animated">Transform</span>
             </span>
             {" "}Their Physique In 180 Days
           </h1>
@@ -77,22 +91,22 @@ export default function ESL() {
 
           {/* Trust indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-3 text-yellow-400">
+            <div className="flex items-center justify-center gap-3 text-yellow-400 stagger-1">
               <Users className="w-5 h-5" />
               <span className="font-semibold text-sm">100+ Clients Helped</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-yellow-400">
+            <div className="flex items-center justify-center gap-3 text-yellow-400 stagger-2">
               <Zap className="w-5 h-5" />
               <span className="font-semibold text-sm">Busy-Schedule Friendly</span>
             </div>
-            <div className="flex items-center justify-center gap-3 text-yellow-400">
+            <div className="flex items-center justify-center gap-3 text-yellow-400 stagger-3">
               <Target className="w-5 h-5" />
               <span className="font-semibold text-sm">Personalized Coaching</span>
             </div>
           </div>
 
           {/* Hero video */}
-          <div className="relative mb-16">
+          <div className="relative mb-16" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
             <div className="glass-card p-1 border-yellow-500/30">
               <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 <iframe
@@ -130,25 +144,25 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
-      {/* SECTION 2: WHAT YOU GET ON THE CALL - THEMED SECTION */}
-      <section data-animate className="py-32 px-4 bg-black relative">
+      {/* SECTION 2: WHAT YOU GET ON THE CALL - ENHANCED THEMED SECTION */}
+      <section data-animate className="py-32 px-4 bg-black grid-bg relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-b from-yellow-600/5 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-gradient-to-t from-yellow-600/5 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-b from-yellow-600/8 to-transparent rounded-full blur-3xl parallax-element"></div>
+          <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-gradient-to-t from-yellow-600/8 to-transparent rounded-full blur-3xl parallax-element" style={{ animationDelay: '0.5s' }}></div>
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               What You'll Get On The Call
             </h2>
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-12 bg-gradient-to-r from-yellow-500 to-transparent"></div>
-              <p className="text-yellow-400 font-semibold">Your Personalized Strategy</p>
-              <div className="h-px w-12 bg-gradient-to-l from-yellow-500 to-transparent"></div>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-gradient-to-r from-yellow-500 to-transparent"></div>
+              <p className="text-yellow-400 font-semibold text-lg">Your Personalized Strategy</p>
+              <div className="h-px w-16 bg-gradient-to-l from-yellow-500 to-transparent"></div>
             </div>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               A comprehensive analysis designed specifically for your goals and lifestyle
             </p>
           </div>
@@ -160,12 +174,12 @@ export default function ESL() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Benefit Card 1 */}
-              <div className="group relative md:pr-8">
-                <div className="absolute hidden md:block -right-12 top-8 w-6 h-6 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/50"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300 border-yellow-500/20 hover:border-yellow-500/50">
+              <div className="group relative md:pr-8 stagger-1">
+                <div className="absolute hidden md:block -right-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/40 group-hover:shadow-yellow-600/60 transition-all">
-                      <Target className="w-7 h-7 text-black" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
+                      <Target className="w-8 h-8 text-black" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-yellow-300">Personalized Physique Strategy</h3>
@@ -178,12 +192,12 @@ export default function ESL() {
               </div>
 
               {/* Benefit Card 2 */}
-              <div className="group relative md:pl-8">
-                <div className="absolute hidden md:block -left-12 top-8 w-6 h-6 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/50"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300 border-yellow-500/20 hover:border-yellow-500/50">
+              <div className="group relative md:pl-8 stagger-2">
+                <div className="absolute hidden md:block -left-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/40 group-hover:shadow-yellow-600/60 transition-all">
-                      <Zap className="w-7 h-7 text-black" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
+                      <Zap className="w-8 h-8 text-black" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-yellow-300">180-Day Transformation Roadmap</h3>
@@ -196,12 +210,12 @@ export default function ESL() {
               </div>
 
               {/* Benefit Card 3 */}
-              <div className="group relative md:pr-8">
-                <div className="absolute hidden md:block -right-12 top-8 w-6 h-6 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/50"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300 border-yellow-500/20 hover:border-yellow-500/50">
+              <div className="group relative md:pr-8 stagger-3">
+                <div className="absolute hidden md:block -right-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/40 group-hover:shadow-yellow-600/60 transition-all">
-                      <Award className="w-7 h-7 text-black" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
+                      <Award className="w-8 h-8 text-black" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-yellow-300">Nutrition & Training Bottleneck Audit</h3>
@@ -214,12 +228,12 @@ export default function ESL() {
               </div>
 
               {/* Benefit Card 4 */}
-              <div className="group relative md:pl-8">
-                <div className="absolute hidden md:block -left-12 top-8 w-6 h-6 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/50"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300 border-yellow-500/20 hover:border-yellow-500/50">
+              <div className="group relative md:pl-8 stagger-4">
+                <div className="absolute hidden md:block -left-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/40 group-hover:shadow-yellow-600/60 transition-all">
-                      <Check className="w-7 h-7 text-black" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
+                      <Check className="w-8 h-8 text-black" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-3 text-yellow-300">Custom Action Plan</h3>
@@ -239,7 +253,7 @@ export default function ESL() {
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
       {/* SECTION 3: TESTIMONIALS */}
-      <section data-animate className="py-32 px-4 bg-black">
+      <section data-animate className="py-32 px-4 bg-black grid-bg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Real Client Results
@@ -247,7 +261,7 @@ export default function ESL() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="glass-card p-8 border-yellow-500/20">
+            <div className="glass-card p-8 border-yellow-500/20 stagger-1 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
@@ -261,7 +275,7 @@ export default function ESL() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="glass-card p-8 border-yellow-500/20">
+            <div className="glass-card p-8 border-yellow-500/20 stagger-2 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
@@ -275,7 +289,7 @@ export default function ESL() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="glass-card p-8 border-yellow-500/20">
+            <div className="glass-card p-8 border-yellow-500/20 stagger-3 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
@@ -302,7 +316,7 @@ export default function ESL() {
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
       {/* SECTION 4: CASE STUDY VIDEO */}
-      <section data-animate className="py-32 px-4 bg-black">
+      <section data-animate className="py-32 px-4 bg-black grid-bg">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
             Real Client Wins
@@ -333,7 +347,7 @@ export default function ESL() {
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
       {/* SECTION 5: FINAL CTA */}
-      <section data-animate className="py-32 px-4 bg-black">
+      <section data-animate className="py-32 px-4 bg-black grid-bg">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready To Build A Physique That Matches Your Ambition?
