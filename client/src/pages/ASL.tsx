@@ -102,18 +102,16 @@ export default function ASL() {
       <Header />
 
       {/* SECTION 1: CONFIRMATION HERO */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 bg-black">
         {/* Background gradient glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-green-600/10 to-transparent rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="flex justify-center mb-12">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">AH</span>
-            </div>
+            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Maho Fitness" className="w-20 h-20 rounded-full" />
           </div>
 
           {/* Success indicator */}
@@ -158,7 +156,7 @@ export default function ASL() {
       <div className="h-px bg-gradient-to-r from-transparent via-green-600/30 to-transparent"></div>
 
       {/* SECTION 2: PREP / PROGRAM VIDEO */}
-      <section id="prep-video-section" data-animate className="py-32 px-4 bg-gradient-to-b from-background to-gray-900/50">
+      <section id="prep-video-section" data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             How To Prepare For Your Call
@@ -216,7 +214,7 @@ export default function ASL() {
       <div className="h-px bg-gradient-to-r from-transparent via-green-600/30 to-transparent"></div>
 
       {/* SECTION 3: OBJECTION HANDLING VIDEOS */}
-      <section data-animate className="py-32 px-4">
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             Common Questions Answered
@@ -282,7 +280,7 @@ export default function ASL() {
       <div className="h-px bg-gradient-to-r from-transparent via-green-600/30 to-transparent"></div>
 
       {/* SECTION 4: MORE TESTIMONIALS / CLIENT WINS */}
-      <section data-animate className="py-32 px-4 bg-gradient-to-b from-background to-gray-900/50">
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             What Our Clients Achieve
@@ -351,7 +349,7 @@ export default function ASL() {
       <div className="h-px bg-gradient-to-r from-transparent via-green-600/30 to-transparent"></div>
 
       {/* SECTION 5: FINAL REMINDER */}
-      <section data-animate className="py-32 px-4">
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -417,7 +415,7 @@ export default function ASL() {
       {/* Footer */}
       <footer className="bg-gray-950 py-8 px-4 border-t border-gray-800">
         <div className="max-w-5xl mx-auto text-center text-gray-500 text-sm">
-          <p>© 2026 Aleksandr Harrison Coaching. All rights reserved.</p>
+          <p>© 2026 Maho Fitness Coaching. All rights reserved.</p>
         </div>
       </footer>
     </div>

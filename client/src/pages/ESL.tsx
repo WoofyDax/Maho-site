@@ -48,27 +48,30 @@ export default function ESL() {
       <Header />
 
       {/* SECTION 1: HERO */}
-      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 opacity-0 animate-fade-in">
+      <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 opacity-0 animate-fade-in bg-black">
         {/* Background gradient glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-amber-600/10 to-transparent rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="flex justify-center mb-12">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">AH</span>
-            </div>
+            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Maho Fitness" className="w-20 h-20 rounded-full" />
           </div>
 
-          {/* Main headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-center mb-6 gold-accent">
-            We Help Busy Men Transform Their Physique In 180 Days
+          {/* Main headline with gold accent */}
+          <h1 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
+            We Help Busy Men{" "}
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-500 rounded-lg -skew-x-12 opacity-20 blur-sm"></span>
+              <span className="relative text-amber-300 italic font-light">Transform</span>
+            </span>
+            {" "}Their Physique In 180 Days
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto leading-relaxed">
+          {/* Subheadline - smaller text */}
+          <p className="text-sm md:text-base text-gray-400 text-center mb-12 max-w-2xl mx-auto leading-relaxed">
             A premium coaching system built for men with demanding schedules who want to lose fat, build muscle, and regain confidence without guessing what to do next.
           </p>
 
@@ -76,41 +79,50 @@ export default function ESL() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-3 text-amber-400">
               <Users className="w-5 h-5" />
-              <span className="font-semibold">100+ Clients Helped</span>
+              <span className="font-semibold text-sm">100+ Clients Helped</span>
             </div>
             <div className="flex items-center justify-center gap-3 text-amber-400">
               <Zap className="w-5 h-5" />
-              <span className="font-semibold">Busy-Schedule Friendly</span>
+              <span className="font-semibold text-sm">Busy-Schedule Friendly</span>
             </div>
             <div className="flex items-center justify-center gap-3 text-amber-400">
               <Target className="w-5 h-5" />
-              <span className="font-semibold">Personalized Coaching</span>
+              <span className="font-semibold text-sm">Personalized Coaching</span>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="flex justify-center">
-            <button
-              onClick={scrollToCalendly}
-              className="btn-liquid-gold text-lg md:text-xl px-10 md:px-12 py-5 md:py-6"
-            >
-              Book a Call
-            </button>
-          </div>
-
-          {/* Hero image placeholder */}
-          <div className="mt-16 relative">
-            <div className="aspect-video bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg border border-amber-600/30 flex items-center justify-center overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent"></div>
-              <div className="relative z-10 text-center">
-                <div className="w-20 h-20 bg-amber-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-16 h-16 bg-amber-600/30 rounded-full flex items-center justify-center">
-                    <span className="text-amber-400 text-3xl">🎯</span>
-                  </div>
-                </div>
-                <p className="text-gray-400 text-sm">Coach Photo / Transformation Results Placeholder</p>
+          {/* CTA - Calendly Embed */}
+          <div className="flex justify-center mb-16">
+            <div className="glass-card p-1 w-full max-w-2xl">
+              <div className="bg-gray-900 rounded-lg overflow-hidden">
+                <iframe
+                  title="Calendly Booking"
+                  src="https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call?hide_event_type_details=1&hide_gdpr_block=1"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  className="rounded-lg"
+                ></iframe>
               </div>
             </div>
+          </div>
+
+          {/* Hero video placeholder - embedded video */}
+          <div className="relative">
+            <div className="glass-card p-1">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dBzUhEX1weI?quality=hd"
+                  title="180-Day Transformation System"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+            <p className="text-center text-gray-400 text-sm mt-4">Watch how the 180-day transformation system works</p>
           </div>
         </div>
       </section>
@@ -119,7 +131,7 @@ export default function ESL() {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
 
       {/* SECTION 2: VIDEO SALES LETTER */}
-      <section data-animate className="py-32 px-4 bg-gradient-to-b from-background to-gray-900/50">
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-gray-300 mb-8 text-lg">
             Watch this short video to see how the 180-day transformation system works.
@@ -131,7 +143,7 @@ export default function ESL() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/dBzUhEX1weI"
+                src="https://www.youtube.com/embed/dBzUhEX1weI?quality=hd"
                 title="180-Day Transformation System"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -155,100 +167,85 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
 
-      {/* SECTION 3: CALENDLY BOOKING */}
-      <section id="calendly-section" data-animate className="py-32 px-4">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Book Your 1:1 Strategy Call
-          </h2>
-          <p className="text-center text-gray-400 mb-12">
-            Choose a time that works best for you.
-          </p>
-
-          {/* Calendly embed container */}
-          <div className="glass-card p-8">
-            <div className="bg-gray-800 rounded-lg p-12 text-center">
-              <p className="text-gray-400 mb-4">Calendly Booking Widget</p>
-              <iframe
-                title="Calendly Booking"
-                src="https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call?hide_event_type_details=1&hide_gdpr_block=1"
-                width="100%"
-                height="600"
-                frameBorder="0"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
-
-      {/* SECTION 4: WHAT YOU GET ON THE CALL */}
-      <section data-animate className="py-32 px-4 bg-gradient-to-b from-background to-gray-900/50">
+      {/* SECTION 3: WHAT YOU GET ON THE CALL */}
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             What You'll Get On The Call
           </h2>
+          <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+            A personalized strategy designed specifically for your goals and lifestyle
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Benefit Card 1 */}
-            <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Personalized Physique Strategy</h3>
-                  <p className="text-gray-400">
-                    We'll identify the fastest path to your goal based on your schedule, training history, and current lifestyle.
-                  </p>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-600/30">
+                    <Target className="w-7 h-7 text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3 text-amber-300">Personalized Physique Strategy</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      We'll identify the fastest path to your goal based on your schedule, training history, and current lifestyle.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Benefit Card 2 */}
-            <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-6 h-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">180-Day Transformation Roadmap</h3>
-                  <p className="text-gray-400">
-                    You'll see what your next 6 months could look like with a structured plan instead of random workouts.
-                  </p>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-600/30">
+                    <Zap className="w-7 h-7 text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3 text-amber-300">180-Day Transformation Roadmap</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      You'll see what your next 6 months could look like with a structured plan instead of random workouts.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Benefit Card 3 */}
-            <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Nutrition & Training Bottleneck Audit</h3>
-                  <p className="text-gray-400">
-                    We'll uncover what is actually holding you back: food, consistency, training intensity, recovery, or accountability.
-                  </p>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-600/30">
+                    <Award className="w-7 h-7 text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3 text-amber-300">Nutrition & Training Bottleneck Audit</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      We'll uncover what is actually holding you back: food, consistency, training intensity, recovery, or accountability.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Benefit Card 4 */}
-            <div className="glass-card p-8 hover:scale-105 transition-transform duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Check className="w-6 h-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Custom Action Plan</h3>
-                  <p className="text-gray-400">
-                    You'll leave with clear next steps whether or not you decide to work with us.
-                  </p>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-transparent rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="glass-card p-8 relative hover:scale-105 transition-transform duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-600/30">
+                    <Check className="w-7 h-7 text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3 text-amber-300">Custom Action Plan</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      You'll leave with clear next steps whether or not you decide to work with us.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -259,8 +256,8 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
 
-      {/* SECTION 5: TESTIMONIALS */}
-      <section data-animate className="py-32 px-4">
+      {/* SECTION 4: TESTIMONIALS */}
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Real Client Results
@@ -277,7 +274,7 @@ export default function ESL() {
               <p className="text-gray-300 mb-6 italic">
                 "Down 24 lbs while working 60-hour weeks. I never thought I could maintain consistency with my schedule, but this system made it possible."
               </p>
-              <p className="font-bold">Client Testimonial</p>
+              <p className="font-bold text-amber-300">Client Testimonial</p>
               <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
             </div>
 
@@ -291,7 +288,7 @@ export default function ESL() {
               <p className="text-gray-300 mb-6 italic">
                 "Finally built a plan I could actually stick to. No more guessing, just clear direction and accountability."
               </p>
-              <p className="font-bold">Client Testimonial</p>
+              <p className="font-bold text-amber-300">Client Testimonial</p>
               <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
             </div>
 
@@ -305,7 +302,7 @@ export default function ESL() {
               <p className="text-gray-300 mb-6 italic">
                 "I stopped guessing and started seeing measurable progress every week. The coaching is exactly what I needed."
               </p>
-              <p className="font-bold">Client Testimonial</p>
+              <p className="font-bold text-amber-300">Client Testimonial</p>
               <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
             </div>
           </div>
@@ -322,8 +319,8 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
 
-      {/* SECTION 6: CASE STUDY VIDEO */}
-      <section data-animate className="py-32 px-4 bg-gradient-to-b from-background to-gray-900/50">
+      {/* SECTION 5: CASE STUDY VIDEO */}
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
             Real Client Wins
@@ -335,7 +332,7 @@ export default function ESL() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/tsLz3ohswow?start=1"
+                src="https://www.youtube.com/embed/tsLz3ohswow?start=1&quality=hd"
                 title="Client Case Study"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -353,8 +350,8 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-600/30 to-transparent"></div>
 
-      {/* SECTION 7: FINAL CTA */}
-      <section data-animate className="py-32 px-4">
+      {/* SECTION 6: FINAL CTA */}
+      <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready To Build A Physique That Matches Your Ambition?
@@ -381,7 +378,7 @@ export default function ESL() {
       {/* Footer */}
       <footer className="bg-gray-950 py-8 px-4 border-t border-gray-800">
         <div className="max-w-5xl mx-auto text-center text-gray-500 text-sm">
-          <p>© 2026 Aleksandr Harrison Coaching. All rights reserved.</p>
+          <p>© 2026 Maho Fitness. All rights reserved.</p>
         </div>
       </footer>
     </div>
