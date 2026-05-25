@@ -187,16 +187,17 @@
   /* Liquid Glass Button Style */
   .btn-liquid-gold {
     @apply relative px-8 py-4 font-bold text-black rounded-lg overflow-hidden;
-    background: linear-gradient(135deg, oklch(0.82 0.2 80) 0%, oklch(0.75 0.18 75) 100%);
-    box-shadow: 0 0 30px rgba(250, 204, 21, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #fbbf24 0%, #fcd34d 50%, #fbbf24 100%);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(250, 204, 21, 0.5);
+    border: 1px solid rgba(251, 191, 36, 0.6);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .btn-liquid-gold:hover {
-    box-shadow: 0 0 50px rgba(250, 204, 21, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 50px rgba(251, 191, 36, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
+    background: linear-gradient(135deg, #fcd34d 0%, #fef08a 50%, #fcd34d 100%);
   }
 
   .btn-liquid-gold:active {
@@ -238,14 +239,15 @@
   .glass-card {
     @apply relative rounded-lg backdrop-blur-md;
     background: rgba(18, 18, 18, 0.6);
-    border: 1px solid rgba(250, 204, 21, 0.2);
+    border: 1px solid rgba(251, 191, 36, 0.25);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .glass-card:hover {
     background: rgba(18, 18, 18, 0.8);
-    box-shadow: 0 8px 32px rgba(250, 204, 21, 0.1), 0 0 30px rgba(250, 204, 21, 0.1);
+    box-shadow: 0 8px 32px rgba(251, 191, 36, 0.15), 0 0 30px rgba(251, 191, 36, 0.15);
     transition: all 0.3s ease-out;
+    border-color: rgba(251, 191, 36, 0.4);
   }
 
   /* Radial gold glow */

@@ -3,6 +3,7 @@ import { useLocation } from "wouter";
 import { Check, Users, Zap, Target, Award } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
+import { CallBenefitsAnimation } from "@/components/CallBenefitsAnimation";
 
 /**
  * ESL (Entry Sales Letter) - Main Landing Page
@@ -81,7 +82,8 @@ export default function ESL() {
               <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg -skew-x-12 opacity-25 blur-sm"></span>
               <span style={{ fontFamily: 'var(--font-cursive)' }} className="relative text-yellow-400 text-7xl md:text-8xl font-light underline-animated">Transform</span>
             </span>
-            {" "}Their Physique In 180 Days
+            {" "}Their Physique In{" "}
+            <span style={{ fontFamily: 'var(--font-cursive)' }} className="text-yellow-400 text-7xl md:text-8xl font-light underline-animated">180 Days</span>
           </h1>
 
           {/* Subheadline - smaller text */}
@@ -144,7 +146,7 @@ export default function ESL() {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
-      {/* SECTION 2: WHAT YOU GET ON THE CALL - ENHANCED THEMED SECTION */}
+      {/* SECTION 2: WHAT YOU GET ON THE CALL - ANIMATED SOFTWARE INTERFACE */}
       <section data-animate className="py-32 px-4 bg-black grid-bg relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -153,99 +155,17 @@ export default function ESL() {
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               What You'll Get On The Call
             </h2>
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="h-px w-16 bg-gradient-to-r from-yellow-500 to-transparent"></div>
-              <p className="text-yellow-400 font-semibold text-lg">Your Personalized Strategy</p>
-              <div className="h-px w-16 bg-gradient-to-l from-yellow-500 to-transparent"></div>
-            </div>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              A comprehensive analysis designed specifically for your goals and lifestyle
+              An interactive breakdown of your personalized strategy
             </p>
           </div>
 
-          {/* Themed cards with connecting line */}
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500/20 via-yellow-500/50 to-yellow-500/20"></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Benefit Card 1 */}
-              <div className="group relative md:pr-8 stagger-1">
-                <div className="absolute hidden md:block -right-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
-                      <Target className="w-8 h-8 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-yellow-300">Personalized Physique Strategy</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        We'll identify the fastest path to your goal based on your schedule, training history, and current lifestyle.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 2 */}
-              <div className="group relative md:pl-8 stagger-2">
-                <div className="absolute hidden md:block -left-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
-                      <Zap className="w-8 h-8 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-yellow-300">180-Day Transformation Roadmap</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        You'll see what your next 6 months could look like with a structured plan instead of random workouts.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 3 */}
-              <div className="group relative md:pr-8 stagger-3">
-                <div className="absolute hidden md:block -right-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
-                      <Award className="w-8 h-8 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-yellow-300">Nutrition & Training Bottleneck Audit</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        We'll uncover what is actually holding you back: food, consistency, training intensity, recovery, or accountability.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 4 */}
-              <div className="group relative md:pl-8 stagger-4">
-                <div className="absolute hidden md:block -left-12 top-8 w-8 h-8 bg-yellow-500 rounded-full border-4 border-black shadow-lg shadow-yellow-500/60 group-hover:scale-125 transition-transform duration-300"></div>
-                <div className="glass-card p-8 relative hover:scale-105 transition-all duration-300 border-yellow-500/30 hover:border-yellow-500/60 hover:shadow-lg hover:shadow-yellow-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-600/50 group-hover:shadow-yellow-600/70 transition-all">
-                      <Check className="w-8 h-8 text-black" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 text-yellow-300">Custom Action Plan</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        You'll leave with clear next steps whether or not you decide to work with us.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Animated Software Interface */}
+          <CallBenefitsAnimation />
         </div>
       </section>
 
