@@ -9,16 +9,16 @@ export function Header({ showNav = true }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black via-black/95 to-black/80 backdrop-blur-xl border-b border-yellow-500/10 rounded-b-3xl">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center relative">
-        {/* Logo - Centered */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo - Left */}
         <button
           onClick={() => setLocation("/")}
-          className="flex items-center justify-center gap-3 hover:opacity-90 transition-opacity group"
+          className="flex items-center gap-3 hover:opacity-90 transition-opacity group"
         >
           <img 
             src="/manus-storage/maho-logo_64d5e184.png" 
             alt="Maho Fitness" 
-            className="w-12 h-12 rounded-full group-hover:shadow-lg group-hover:shadow-yellow-500/40 transition-all duration-300 ml-1" 
+            className="w-12 h-12 rounded-full group-hover:shadow-lg group-hover:shadow-yellow-500/40 transition-all duration-300 translate-x-1" 
           />
           <div className="flex flex-col leading-tight">
             <span className="font-bold text-white text-base tracking-tight">Maho</span>
@@ -28,7 +28,7 @@ export function Header({ showNav = true }: HeaderProps) {
 
         {/* Navigation */}
         {showNav && (
-          <nav className="absolute right-6 flex items-center gap-6">
+          <nav className="flex items-center gap-6">
             <button
               onClick={() => setLocation("/")}
               className="text-gray-300 hover:text-yellow-400 transition-colors text-sm font-medium"
