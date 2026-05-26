@@ -42,10 +42,17 @@ export function CallBenefitsAnimation() {
   return (
     <div className="w-full max-w-4xl mx-auto">
       {/* Software Interface Container */}
-      <div className="glass-card p-1 border-yellow-500/30 overflow-hidden">
-        <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg overflow-hidden">
+      <div className="glass-card p-1 border-yellow-500/30 overflow-hidden grid-bg">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg overflow-hidden relative">
+          {/* Grid background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-950" style={{
+            backgroundImage: 'linear-gradient(rgba(250, 204, 21, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(250, 204, 21, 0.03) 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+            pointerEvents: 'none'
+          }}></div>
+          
           {/* Window Header */}
-          <div className="bg-gradient-to-r from-yellow-500/20 to-yellow-600/10 border-b border-yellow-500/20 px-6 py-4 flex items-center gap-3">
+          <div className="relative z-10 bg-gradient-to-r from-yellow-500/20 to-yellow-600/10 border-b border-yellow-500/20 px-6 py-4 flex items-center gap-3">
             <div className="flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500/60"></div>
@@ -55,7 +62,7 @@ export function CallBenefitsAnimation() {
           </div>
 
           {/* Content Area */}
-          <div className="p-8 md:p-12 min-h-96">
+          <div className="relative z-10 p-8 md:p-12 min-h-96">
             <div className="flex flex-col md:flex-row gap-8">
               {/* Left: Steps List */}
               <div className="flex-1 space-y-3">
@@ -137,7 +144,7 @@ export function CallBenefitsAnimation() {
           </div>
 
           {/* Footer */}
-          <div className="bg-gray-950/50 border-t border-yellow-500/10 px-6 py-3 flex items-center justify-between text-xs text-gray-500">
+          <div className="relative z-10 bg-gray-950/50 border-t border-yellow-500/10 px-6 py-3 flex items-center justify-between text-xs text-gray-500">
             <span>Ready to get started?</span>
             <span className="text-yellow-400/60">→ Book your call below</span>
           </div>
@@ -145,7 +152,7 @@ export function CallBenefitsAnimation() {
       </div>
 
       {/* Manual Navigation */}
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="relative z-20 flex justify-center gap-2 mt-6">
         {steps.map((_, index) => (
           <button
             key={index}
