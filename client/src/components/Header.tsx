@@ -18,7 +18,7 @@ export function Header({ showNav = true }: HeaderProps) {
           <img 
             src="/manus-storage/maho-logo_64d5e184.png" 
             alt="Maho Fitness" 
-            className="w-12 h-12 rounded-full group-hover:shadow-lg group-hover:shadow-yellow-500/40 transition-all duration-300" 
+            className="w-12 h-12 rounded-full group-hover:shadow-lg group-hover:shadow-yellow-500/40 transition-all duration-300 ml-1" 
           />
           <div className="flex flex-col leading-tight">
             <span className="font-bold text-white text-base tracking-tight">Maho</span>

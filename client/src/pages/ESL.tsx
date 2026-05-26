@@ -298,9 +298,18 @@ export default function ESL() {
           {/* CTA Button */}
           <button
             onClick={scrollToCalendly}
-            className="btn-liquid-gold text-lg px-12 py-6 pulse-glow"
+            className="relative px-10 py-4 text-lg text-black font-bold rounded-xl overflow-hidden group"
           >
-            Book Your Call
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 rounded-xl"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+            <span className="absolute inset-0 rounded-xl overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-pulse transform -skew-x-12 group-hover:translate-x-full transition-all duration-500"></span>
+            </span>
+            <span className="relative flex items-center gap-2 justify-center">
+              <span>Book Your Call</span>
+              <span className="text-xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </span>
+            <span className="absolute inset-0 rounded-xl shadow-lg shadow-yellow-500/0 group-hover:shadow-yellow-500/70 transition-shadow duration-300"></span>
           </button>
         </div>
       </section>
