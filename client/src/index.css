@@ -337,6 +337,20 @@
   .stagger-3 { animation: staggerIn 0.6s ease-out 0.3s both; }
   .stagger-4 { animation: staggerIn 0.6s ease-out 0.4s both; }
 
+  /* Pulse animation for button effects */
+  @keyframes buttonPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
+    }
+  }
+
+  .animate-pulse {
+    animation: buttonPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   /* Subtle pulse glow */
   @keyframes pulseGlow {
     0%, 100% {

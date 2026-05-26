@@ -8,12 +8,12 @@ export function Header({ showNav = true }: HeaderProps) {
   const [, setLocation] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black via-black/95 to-black/80 backdrop-blur-xl border-b border-yellow-500/10">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black via-black/95 to-black/80 backdrop-blur-xl border-b border-yellow-500/10 rounded-b-3xl">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center relative">
         {/* Logo - Centered */}
         <button
           onClick={() => setLocation("/")}
-          className="flex-1 flex items-center justify-start gap-3 hover:opacity-90 transition-opacity group"
+          className="flex items-center justify-center gap-3 hover:opacity-90 transition-opacity group"
         >
           <img 
             src="/manus-storage/maho-logo_64d5e184.png" 
@@ -28,7 +28,7 @@ export function Header({ showNav = true }: HeaderProps) {
 
         {/* Navigation */}
         {showNav && (
-          <nav className="flex items-center gap-8 flex-1 justify-end">
+          <nav className="absolute right-6 flex items-center gap-6">
             <button
               onClick={() => setLocation("/")}
               className="text-gray-300 hover:text-yellow-400 transition-colors text-sm font-medium"
@@ -39,9 +39,25 @@ export function Header({ showNav = true }: HeaderProps) {
               href="https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-500/60 transition-all text-sm"
+              className="relative px-8 py-2.5 text-black font-bold rounded-xl text-sm overflow-hidden group"
             >
-              Book Call
+              {/* Animated background gradient */}
+              <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 rounded-xl"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+              
+              {/* Shine effect */}
+              <span className="absolute inset-0 rounded-xl overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-pulse transform -skew-x-12 group-hover:translate-x-full transition-all duration-500"></span>
+              </span>
+              
+              {/* Button text */}
+              <span className="relative flex items-center gap-2 justify-center">
+                <span>Book Call</span>
+                <span className="text-lg group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </span>
+              
+              {/* Glow effect */}
+              <span className="absolute inset-0 rounded-xl shadow-lg shadow-yellow-500/0 group-hover:shadow-yellow-500/70 transition-shadow duration-300"></span>
             </a>
           </nav>
         )}
