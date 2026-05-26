@@ -108,8 +108,8 @@ export default function ESL() {
           </div>
 
           {/* Hero video */}
-          <div className="relative mb-16" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
-            <div className="glass-card p-1 border-yellow-500/30">
+          <div className="relative mb-16 opacity-0 animate-fade-in" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
               <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 <iframe
                   width="100%"
@@ -125,18 +125,32 @@ export default function ESL() {
             <p className="text-center text-gray-400 text-sm mt-4">Watch how the 180-day transformation system works</p>
           </div>
 
-          {/* CTA - Calendly Embed */}
-          <div id="calendly-section" className="flex justify-center">
-            <div className="glass-card p-1 w-full max-w-2xl border-yellow-500/30">
-              <div className="bg-gray-900 rounded-lg overflow-hidden">
-                <iframe
-                  title="Calendly Booking"
-                  src="https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call?hide_event_type_details=1&hide_gdpr_block=1"
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  className="rounded-lg"
-                ></iframe>
+          {/* CTA Section - Calendly Embed */}
+          <div id="calendly-section" className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="w-full max-w-2xl">
+              {/* Section Header */}
+              <div className="text-center mb-8">
+                <h3 className="text-3xl md:text-4xl font-bold mb-3">Ready to Start Your Transformation?</h3>
+                <p className="text-gray-400 text-lg">Pick a time that works best for you</p>
+                <div className="flex items-center justify-center gap-3 mt-4">
+                  <div className="h-px w-12 bg-gradient-to-r from-yellow-500 to-transparent"></div>
+                  <span className="text-yellow-400 font-semibold text-sm">30-Minute Strategy Call</span>
+                  <div className="h-px w-12 bg-gradient-to-l from-yellow-500 to-transparent"></div>
+                </div>
+              </div>
+              
+              {/* Calendly Embed */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg overflow-hidden">
+                  <iframe
+                    title="Calendly Booking"
+                    src="https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call?hide_event_type_details=1&hide_gdpr_block=1"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
