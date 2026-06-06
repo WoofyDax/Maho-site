@@ -257,9 +257,9 @@ export default function ESL() {
               <img src="/manus-storage/transformation-2_8a0a2af6.jpg" alt="Client Transformation 2" className="w-full h-full object-cover aspect-square" />
             </div>
 
-            {/* Transformation Image 3 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
-              <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover aspect-square" />
+            {/* Transformation Image 3 - Horizontal (Large) */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg md:col-span-2">
+              <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover aspect-video" />
             </div>
           </div>
         </div>
