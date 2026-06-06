@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 import { Check, ChevronDown, Calendar, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -21,7 +20,7 @@ interface ObjectionVideo {
   id: number;
   title: string;
   description: string;
-  videoId: string;
+  videoUrl: string;
 }
 
 const objectionVideos: ObjectionVideo[] = [
@@ -29,56 +28,67 @@ const objectionVideos: ObjectionVideo[] = [
     id: 1,
     title: "Will this work for me?",
     description: "Learn how our system adapts to your unique situation and goals.",
-    videoId: "dBzUhEX1weI",
+    videoUrl: "https://drive.google.com/file/d/14UTdEYPtzrDCqkmJvDTftO2KdGVrvWsW/view?usp=sharing",
   },
   {
     id: 2,
-    title: "I don't have enough time",
+    title: "I don't have enough time.",
     description: "Discover how busy professionals fit this into their schedule.",
-    videoId: "dBzUhEX1weI",
+    videoUrl: "https://drive.google.com/file/d/18wqpLQXSTvB5CZxMB4tx2I9cZYXAVLm0/view?usp=sharing",
   },
   {
     id: 3,
-    title: "I've tried programs before",
+    title: "I've tried programs before.",
     description: "See what makes our approach different from other coaching programs.",
-    videoId: "dBzUhEX1weI",
+    videoUrl: "https://drive.google.com/file/d/1DrtzODLBOirWaXBLpgceNTphPXCsU8md/view?usp=sharing",
   },
   {
     id: 4,
-    title: "I can't afford it",
-    description: "Understand the investment and ROI of premium coaching.",
-    videoId: "dBzUhEX1weI",
+    title: "What if I'm too busy?",
+    description: "How our system works specifically for demanding schedules.",
+    videoUrl: "https://drive.google.com/file/d/1I_rvzUCd05OHWPrNmx8_rWvLOsKf9Xqo/view?usp=sharing",
   },
   {
     id: 5,
-    title: "Why now?",
-    description: "Why taking action today matters for your transformation.",
-    videoId: "dBzUhEX1weI",
+    title: "How does the coaching actually work?",
+    description: "A detailed walkthrough of our coaching process and support.",
+    videoUrl: "https://drive.google.com/file/d/1Ua6DujsqL9wKZSNmtd3fmqWZIf0e3Zp8/view?usp=sharing",
   },
   {
     id: 6,
-    title: "What if I'm too busy?",
-    description: "How our system works specifically for demanding schedules.",
-    videoId: "dBzUhEX1weI",
+    title: "What if I don't know where to start?",
+    description: "We guide you through the entire process step by step.",
+    videoUrl: "https://drive.google.com/file/d/1Wl8TglVrB8fF4hnKsQQYv-2e5g-vPprm/view?usp=sharing",
   },
   {
     id: 7,
-    title: "How does the coaching actually work?",
-    description: "A detailed walkthrough of our coaching process and support.",
-    videoId: "dBzUhEX1weI",
+    title: "What kind of results can I expect?",
+    description: "Real results and timelines from our clients.",
+    videoUrl: "https://drive.google.com/file/d/1e9OkZ-FiNBrT_4spfIp2naiYA1s46C__/view?usp=sharing",
   },
   {
     id: 8,
-    title: "What kind of ROI should I expect?",
-    description: "Real results and timelines from our clients.",
-    videoId: "dBzUhEX1weI",
+    title: "Why should I take action now?",
+    description: "Why taking action today matters for your transformation.",
+    videoUrl: "https://drive.google.com/file/d/1nqGRe6fUllWCRHtSm08AZ8jh6OboGaFB/view?usp=sharing",
+  },
+  {
+    id: 9,
+    title: "What makes this different?",
+    description: "See what sets our coaching apart from other programs.",
+    videoUrl: "https://drive.google.com/file/d/1shLqaXYQ0AAtNoTaluBF2sc6yOrTvCk2/view?usp=sharing",
+  },
+  {
+    id: 10,
+    title: "What happens after the call?",
+    description: "Understand the next steps if you decide to work with us.",
+    videoUrl: "https://drive.google.com/file/d/1wNNPqDWCYnY6Flad188_3RBQICWrWW-u/view?usp=sharing",
   },
 ];
 
 export default function ASL() {
   const [, setLocation] = useLocation();
   const [expandedVideo, setExpandedVideo] = useState<number | null>(null);
-  const [selectedVideo, setSelectedVideo] = useState<ObjectionVideo | null>(null);
 
   // Scroll animation observer
   useEffect(() => {
@@ -111,7 +121,7 @@ export default function ASL() {
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           {/* Logo */}
           <div className="flex justify-center mb-12">
-            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Maho Fitness" className="w-20 h-20 rounded-full" />
+            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Malex Coaching" className="w-20 h-20 rounded-full" />
           </div>
 
           {/* Success indicator */}
@@ -127,27 +137,32 @@ export default function ASL() {
           </h1>
 
           {/* Confirmation message */}
-          <p className="text-xl text-gray-300 mb-8">
-            You're officially booked for your 1:1 strategy call.
+          <p className="text-xl text-gray-300 mb-12">
+            Make sure to complete these two steps before your call so we can make the most of your time.
           </p>
-
-          {/* Next steps */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 mb-12 border border-amber-600/20">
-            <h3 className="text-2xl font-bold mb-4">Before The Call</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Watch the short video below so you know exactly what to expect and how to get the most value from your session. This will help us make the most of our time together.
-            </p>
-          </div>
 
           {/* CTA */}
           <button
             onClick={() => {
               document.getElementById("prep-video-section")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="btn-liquid-gold text-lg px-10 py-5 inline-flex items-center gap-2"
+            className="relative px-10 py-4 text-lg text-yellow-400 font-bold rounded-xl overflow-hidden group backdrop-blur-md"
           >
-            Watch The Prep Video
-            <ArrowRight className="w-5 h-5" />
+            {/* Liquid glass background */}
+            <span className="absolute inset-0 bg-gradient-to-br from-yellow-400/30 via-yellow-300/20 to-yellow-500/30 rounded-xl backdrop-blur-lg"></span>
+            <span className="absolute inset-0 border border-yellow-400/40 rounded-xl"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+            {/* Shine effect */}
+            <span className="absolute inset-0 rounded-xl overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 group-hover:translate-x-full transition-all duration-500"></span>
+            </span>
+            {/* Button text */}
+            <span className="relative flex items-center gap-2 justify-center">
+              <span>Let's Get Started</span>
+              <span className="text-xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </span>
+            {/* Glow effect */}
+            <span className="absolute inset-0 rounded-xl shadow-lg shadow-yellow-400/0 group-hover:shadow-yellow-400/50 transition-shadow duration-300"></span>
           </button>
         </div>
       </section>
@@ -159,52 +174,44 @@ export default function ASL() {
       <section id="prep-video-section" data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            How To Prepare For Your Call
+            Watch This Video On How To Prepare
           </h2>
           <p className="text-center text-gray-400 mb-12">
-            Watch this video to understand our process and get maximum value from your session.
+            Before your call, make sure you are in a quiet place, ready to talk through your goals, and prepared to be honest about where you are currently struggling.
           </p>
 
           {/* Video frame */}
           <div className="glass-card p-1 mb-8">
             <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dBzUhEX1weI"
-                title="Coaching Program Explanation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+              <div className="w-full h-full flex items-center justify-center bg-gray-900 text-gray-400">
+                <div className="text-center">
+                  <p className="text-xl font-semibold mb-2">Prep Video Coming Soon</p>
+                  <p className="text-sm">Check back soon for the preparation video</p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Preparation tips */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3 flex items-center gap-2">
-                <span className="text-amber-400">✓</span> Be In A Quiet Place
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Take this call where you can turn on your camera and have a focused conversation.
-              </p>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3 flex items-center gap-2">
-                <span className="text-amber-400">✓</span> Watch This Video
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Understand our process and funnel so we save time on the call.
-              </p>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3 flex items-center gap-2">
-                <span className="text-amber-400">✓</span> Have Your Goals Ready
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Think about your biggest challenges and what you want to achieve.
-              </p>
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-8 text-center">Prepare For Your Call</h3>
+            <div className="space-y-4 max-w-2xl mx-auto">
+              <div className="flex items-start gap-4">
+                <span className="text-yellow-400 text-xl font-bold mt-1">•</span>
+                <p className="text-gray-300">Be in a quiet place with no distractions.</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-yellow-400 text-xl font-bold mt-1">•</span>
+                <p className="text-gray-300">Be ready to talk about your current fitness goals.</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-yellow-400 text-xl font-bold mt-1">•</span>
+                <p className="text-gray-300">Be honest about what has and has not worked for you before.</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-yellow-400 text-xl font-bold mt-1">•</span>
+                <p className="text-gray-300">Come prepared to take action if the plan makes sense for you.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -217,130 +224,130 @@ export default function ASL() {
       <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Common Questions Answered
+            Frequently Asked Questions
           </h2>
           <p className="text-center text-gray-400 mb-12">
-            Watch these videos to address any concerns before your call.
+            Watch these before your call so you know exactly what to expect.
           </p>
 
           {/* Video grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {objectionVideos.map((video) => (
-              <div
-                key={video.id}
-                className="glass-card p-6 cursor-pointer hover:scale-105 transition-transform duration-300"
-                onClick={() => setSelectedVideo(video)}
-              >
-                {/* Thumbnail placeholder */}
-                <div className="aspect-video bg-gray-800 rounded-lg mb-4 flex items-center justify-center relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 to-transparent rounded-lg"></div>
-                  <div className="relative z-10 w-16 h-16 bg-amber-600/30 rounded-full flex items-center justify-center group-hover:bg-amber-600/50 transition-colors">
-                    <span className="text-amber-400 text-2xl">▶</span>
+              <div key={video.id} className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+                <button
+                  onClick={() => setExpandedVideo(expandedVideo === video.id ? null : video.id)}
+                  className="w-full p-6 text-left hover:bg-gray-800/40 transition-colors rounded-lg"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg text-white mb-2">{video.title}</h3>
+                      <p className="text-gray-400 text-sm">{video.description}</p>
+                    </div>
+                    <ChevronDown
+                      className={`w-5 h-5 text-yellow-400 transition-transform duration-300 flex-shrink-0 ml-4 ${
+                        expandedVideo === video.id ? "rotate-180" : ""
+                      }`}
+                    />
                   </div>
-                </div>
+                </button>
 
-                {/* Video info */}
-                <h3 className="font-bold text-lg mb-2">{video.title}</h3>
-                <p className="text-gray-400 text-sm">{video.description}</p>
+                {/* Expanded video content */}
+                {expandedVideo === video.id && (
+                  <div className="px-6 pb-6 border-t border-yellow-500/20">
+                    <a
+                      href={video.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300"
+                    >
+                      Watch Video →
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>
-
-          {/* Video modal */}
-          {selectedVideo && (
-            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-              <div className="bg-gray-900 rounded-lg max-w-4xl w-full">
-                <div className="flex justify-between items-center p-6 border-b border-gray-800">
-                  <h3 className="text-xl font-bold">{selectedVideo.title}</h3>
-                  <button
-                    onClick={() => setSelectedVideo(null)}
-                    className="text-gray-400 hover:text-white text-2xl"
-                  >
-                    ✕
-                  </button>
-                </div>
-                <div className="aspect-video bg-gray-800 overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
-                    title={selectedVideo.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-green-600/30 to-transparent"></div>
 
-      {/* SECTION 4: MORE TESTIMONIALS / CLIENT WINS */}
+      {/* SECTION 4: TESTIMONIALS & CASE STUDIES */}
       <section data-animate className="py-32 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            What Our Clients Achieve
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            See What Our Clients Have Achieved
           </h2>
+          <p className="text-center text-gray-400 mb-12">
+            Real clients. Real transformations.
+          </p>
 
-          {/* Featured testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Testimonial 1 */}
-            <div className="glass-card p-8">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-amber-400">★</span>
-                ))}
+          {/* Featured case study videos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Video 1 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dI_c-D81x-A?quality=hd&vq=hd720"
+                  title="How our client David went from 20% body fat to 9%"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
-              <p className="text-gray-300 mb-6 italic text-lg">
-                "I went from feeling stuck to having a clear roadmap. The accountability and personalized approach is exactly what I needed."
-              </p>
-              <div>
-                <p className="font-bold">Client Success Story</p>
-                <p className="text-gray-500 text-sm">Placeholder - Replace with real client name and result</p>
-              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client David went from 20% body fat to 9% and got abs in ONE month under Malex Coaching</p>
             </div>
 
-            {/* Testimonial 2 */}
-            <div className="glass-card p-8">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-amber-400">★</span>
-                ))}
+            {/* Video 2 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ZkyrMRfuXk4?quality=hd&vq=hd720"
+                  title="DOWN 20 LBS IN 30 DAYS"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
-              <p className="text-gray-300 mb-6 italic text-lg">
-                "Results without extreme routines. I'm building muscle, losing fat, and actually enjoying the process. This is sustainable."
-              </p>
-              <div>
-                <p className="font-bold">Client Success Story</p>
-                <p className="text-gray-500 text-sm">Placeholder - Replace with real client name and result</p>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">DOWN 20 LBS IN 30 DAYS — Ryan's Journey</p>
+            </div>
+
+            {/* Video 3 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ksrXCFP4SBk?quality=hd&vq=hd720"
+                  title="How our 50-year-old client lost all the fat"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our 50-year-old client lost all the fat and increased his confidence by x100 in less than a year</p>
             </div>
-          </div>
 
-          {/* Case study video */}
-          <div className="glass-card p-1 mb-8">
-            <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/tsLz3ohswow?start=1"
-                title="Featured Client Case Study"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+            {/* Video 4 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/fuQut2Bjr5s?quality=hd&vq=hd720"
+                  title="How our client Lamar got a six-pack"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client Lamar got a six-pack in half a year</p>
             </div>
-          </div>
-
-          {/* Stats */}
-          <div className="text-center">
-            <p className="text-gray-400 text-lg">
-              <span className="text-amber-400 font-bold">100+ men helped</span> • Built for busy professionals • Results without extreme routines
-            </p>
           </div>
         </div>
       </section>
@@ -350,64 +357,35 @@ export default function ASL() {
 
       {/* SECTION 5: FINAL REMINDER */}
       <section data-animate className="py-32 px-4 bg-black">
-        <div className="max-w-3xl mx-auto">
-          <div className="glass-card p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Show Up On Time And Ready To Execute
-            </h2>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            You're All Set
+          </h2>
 
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              This call is designed to give you clarity on your goals, your current bottlenecks, and the exact steps required to transform your physique in the next 180 days.
-            </p>
+          <p className="text-lg text-gray-300 mb-12">
+            We'll speak with you on your scheduled call. Watch the prep section above and come ready.
+          </p>
 
-            {/* Call details */}
-            <div className="bg-gray-800/50 rounded-lg p-6 mb-8 border border-amber-600/20">
-              <p className="text-gray-400 text-sm mb-2">Your booking confirmation has been sent to your email.</p>
-              <p className="text-gray-400 text-sm">Check your calendar for the exact time and Zoom link.</p>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => {
-                  window.open("https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call", "_blank");
-                }}
-                className="btn-liquid-gold px-8 py-4 flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-5 h-5" />
-                Add To Calendar
-              </button>
-              <button
-                onClick={() => {
-                  window.open("https://calendly.com/aleksandrharrison0/aleksandr-harrison-1-1-call", "_blank");
-                }}
-                className="px-8 py-4 rounded-lg border border-amber-600/50 text-amber-400 font-semibold hover:bg-amber-600/10 transition-colors"
-              >
-                View Call Details
-              </button>
-            </div>
-          </div>
-
-          {/* Additional info */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-500 text-sm mb-4">
-              Questions before your call? Reply to your confirmation email and we'll get back to you within 24 hours.
-            </p>
-            <p className="text-gray-600 text-xs">
-              We're excited to help you transform your physique in the next 180 days.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Navigation back to main site */}
-      <section className="py-12 px-4 border-t border-gray-800">
-        <div className="max-w-5xl mx-auto text-center">
+          {/* CTA Button */}
           <button
             onClick={() => setLocation("/")}
-            className="text-amber-400 hover:text-amber-300 font-semibold flex items-center justify-center gap-2 mx-auto"
+            className="relative px-10 py-4 text-lg text-yellow-400 font-bold rounded-xl overflow-hidden group backdrop-blur-md"
           >
-            ← Back To Home
+            {/* Liquid glass background */}
+            <span className="absolute inset-0 bg-gradient-to-br from-yellow-400/30 via-yellow-300/20 to-yellow-500/30 rounded-xl backdrop-blur-lg"></span>
+            <span className="absolute inset-0 border border-yellow-400/40 rounded-xl"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+            {/* Shine effect */}
+            <span className="absolute inset-0 rounded-xl overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 group-hover:translate-x-full transition-all duration-500"></span>
+            </span>
+            {/* Button text */}
+            <span className="relative flex items-center gap-2 justify-center">
+              <span>Back To Main Page</span>
+              <span className="text-xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </span>
+            {/* Glow effect */}
+            <span className="absolute inset-0 rounded-xl shadow-lg shadow-yellow-400/0 group-hover:shadow-yellow-400/50 transition-shadow duration-300"></span>
           </button>
         </div>
       </section>
@@ -415,7 +393,7 @@ export default function ASL() {
       {/* Footer */}
       <footer className="bg-gray-950 py-8 px-4 border-t border-gray-800">
         <div className="max-w-5xl mx-auto text-center text-gray-500 text-sm">
-          <p>© 2026 Maho Fitness Coaching. All rights reserved.</p>
+          <p>© 2026 Malex Coaching. All rights reserved.</p>
         </div>
       </footer>
     </div>

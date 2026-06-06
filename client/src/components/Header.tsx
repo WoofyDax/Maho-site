@@ -17,12 +17,12 @@ export function Header({ showNav = true }: HeaderProps) {
         >
           <img 
             src="/manus-storage/maho-logo_64d5e184.png" 
-            alt="Maho Fitness" 
+            alt="Malex Coaching" 
             className="w-12 h-12 rounded-full group-hover:shadow-lg group-hover:shadow-yellow-500/40 transition-all duration-300 translate-x-1" 
           />
           <div className="flex flex-col leading-tight">
-            <span className="font-bold text-white text-base tracking-tight">Maho</span>
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent font-bold text-base tracking-tight">Fitness</span>
+            <span className="font-bold text-white text-base tracking-tight">Malex</span>
+            <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent font-bold text-base tracking-tight">Coaching</span>
           </div>
         </button>
 

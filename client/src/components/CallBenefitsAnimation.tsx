@@ -6,26 +6,26 @@ export function CallBenefitsAnimation() {
 
   const steps = [
     {
-      title: "Personalized Physique Strategy",
-      description: "We identify the fastest path to your goal based on your schedule, training history, and current lifestyle.",
+      title: "Personalized Breakdown",
+      description: "A clear breakdown of your current problems, what is holding you back, and exactly how we are going to solve them.",
       icon: Target,
       color: "from-yellow-400 to-yellow-600",
     },
     {
-      title: "180-Day Transformation Roadmap",
-      description: "You'll see what your next 6 months could look like with a structured plan instead of random workouts.",
+      title: "Full Walkthrough Of Our System",
+      description: "A walkthrough of the personal system we have used to help 200+ clients build muscle, lose fat, and stay consistent.",
       icon: Zap,
       color: "from-yellow-400 to-yellow-600",
     },
     {
-      title: "Nutrition & Training Bottleneck Audit",
-      description: "We uncover what is actually holding you back: food, consistency, training intensity, recovery, or accountability.",
+      title: "Personalized Roadmap",
+      description: "A custom roadmap showing you exactly how to achieve your fitness goal using a system that takes less than 3 hours per week.",
       icon: Award,
       color: "from-yellow-400 to-yellow-600",
     },
     {
-      title: "Custom Action Plan",
-      description: "You'll leave with clear next steps whether or not you decide to work with us.",
+      title: "Clear Next Steps",
+      description: "A simple action plan so you know exactly what to do after the call.",
       icon: Check,
       color: "from-yellow-400 to-yellow-600",
     },
