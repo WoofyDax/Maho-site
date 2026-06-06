@@ -219,6 +219,14 @@ export default function ESL() {
           </p>
 
           {/* Transformation Images Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {/* Transformation Image 2 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
+              <img src="/manus-storage/transformation-2_f6622678.jpg" alt="Client Transformation 2" className="w-full h-full object-cover aspect-square" />
+            </div>
+          </div>
+
+          {/* Horizontal Image */}
           <div className="grid grid-cols-1 gap-8">
             {/* Transformation Image 3 - Horizontal (Large) */}
             <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
