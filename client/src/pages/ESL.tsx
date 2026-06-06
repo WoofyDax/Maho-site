@@ -185,60 +185,24 @@ export default function ESL() {
           <div className="mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Image Card 1 */}
-              <a
-                href="https://drive.google.com/file/d/15XuLl7s-8_ltT4dDx8VUbePq20MhYWAL/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer"
-              >
-                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <p className="text-sm font-semibold">Click to view</p>
-                  </div>
-                </div>
-              </a>
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg">
+                <img src="/manus-storage/what-you-get-1_0692d769.jpg" alt="What You'll Get - Personalized Breakdown" className="w-full h-full object-cover aspect-square" />
+              </div>
 
               {/* Image Card 2 */}
-              <a
-                href="https://drive.google.com/file/d/1HKM8nxbGZSNzf3ztKnIAGj86utu1dOlK/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer"
-              >
-                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <p className="text-sm font-semibold">Click to view</p>
-                  </div>
-                </div>
-              </a>
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
+                <img src="/manus-storage/what-you-get-2_3cb6bd86.jpg" alt="What You'll Get - System Walkthrough" className="w-full h-full object-cover aspect-square" />
+              </div>
 
               {/* Image Card 3 */}
-              <a
-                href="https://drive.google.com/file/d/1hNJTU3MFjZ3GIawVbvEQi5wA54A0TQsT/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer"
-              >
-                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <p className="text-sm font-semibold">Click to view</p>
-                  </div>
-                </div>
-              </a>
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
+                <img src="/manus-storage/what-you-get-3_75ea3b07.jpg" alt="What You'll Get - Personalized Roadmap" className="w-full h-full object-cover aspect-square" />
+              </div>
 
               {/* Image Card 4 */}
-              <a
-                href="https://drive.google.com/file/d/1puYq8u4U1Gg19O996CSBl3OrLpgmgxMD/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-4 group cursor-pointer"
-              >
-                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <p className="text-sm font-semibold">Click to view</p>
-                  </div>
-                </div>
-              </a>
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-4 group cursor-pointer overflow-hidden rounded-lg">
+                <img src="/manus-storage/what-you-get-4_5054644f.jpg" alt="What You'll Get - Clear Next Steps" className="w-full h-full object-cover aspect-square" />
+              </div>
             </div>
           </div>
         </div>
@@ -294,46 +258,19 @@ export default function ESL() {
           {/* Transformation Images Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Transformation Image 1 */}
-            <a
-              href="https://drive.google.com/file/d/1CooOXZYiMVEEWgfhE7JP9H2MvSZx4V4W/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer"
-            >
-              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <p className="text-sm font-semibold">Client Transformation</p>
-                </div>
-              </div>
-            </a>
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg">
+              <img src="/manus-storage/transformation-1_6acffc9c.jpg" alt="Client Transformation 1" className="w-full h-full object-cover aspect-square" />
+            </div>
 
             {/* Transformation Image 2 */}
-            <a
-              href="https://drive.google.com/file/d/1iK9W-IQE-211jy5sInOCBSPwfuAcOaWE/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer"
-            >
-              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <p className="text-sm font-semibold">Client Transformation</p>
-                </div>
-              </div>
-            </a>
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
+              <img src="/manus-storage/transformation-2_8a0a2af6.jpg" alt="Client Transformation 2" className="w-full h-full object-cover aspect-square" />
+            </div>
 
             {/* Transformation Image 3 */}
-            <a
-              href="https://drive.google.com/file/d/1l3FjU4-6EiaJkHUiEKa_WZfVI5yhDdtt/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer"
-            >
-              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <p className="text-sm font-semibold">Client Transformation</p>
-                </div>
-              </div>
-            </a>
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
+              <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover aspect-square" />
+            </div>
           </div>
         </div>
       </section>
