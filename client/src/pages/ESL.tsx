@@ -72,7 +72,7 @@ export default function ESL() {
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Logo */}
           <div className="flex justify-center mb-12" style={{ transform: `translateY(${scrollY * 0.1}px)` }}>
-            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Maho Fitness" className="w-20 h-20 rounded-full shadow-lg shadow-yellow-500/30" />
+            <img src="/manus-storage/maho-logo_64d5e184.png" alt="Malex Coaching" className="w-20 h-20 rounded-full shadow-lg shadow-yellow-500/30" />
           </div>
 
           {/* Main headline with gold accent and underline */}
