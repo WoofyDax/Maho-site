@@ -180,13 +180,168 @@ export default function ESL() {
 
           {/* Animated Software Interface */}
           <CallBenefitsAnimation />
+
+          {/* What You'll Get - Image Cards */}
+          <div className="mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Image Card 1 */}
+              <a
+                href="https://drive.google.com/file/d/15XuLl7s-8_ltT4dDx8VUbePq20MhYWAL/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer"
+              >
+                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <p className="text-sm font-semibold">Click to view</p>
+                  </div>
+                </div>
+              </a>
+
+              {/* Image Card 2 */}
+              <a
+                href="https://drive.google.com/file/d/1HKM8nxbGZSNzf3ztKnIAGj86utu1dOlK/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer"
+              >
+                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <p className="text-sm font-semibold">Click to view</p>
+                  </div>
+                </div>
+              </a>
+
+              {/* Image Card 3 */}
+              <a
+                href="https://drive.google.com/file/d/1hNJTU3MFjZ3GIawVbvEQi5wA54A0TQsT/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer"
+              >
+                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <p className="text-sm font-semibold">Click to view</p>
+                  </div>
+                </div>
+              </a>
+
+              {/* Image Card 4 */}
+              <a
+                href="https://drive.google.com/file/d/1puYq8u4U1Gg19O996CSBl3OrLpgmgxMD/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-4 group cursor-pointer"
+              >
+                <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="text-center text-gray-400">
+                    <p className="text-sm font-semibold">Click to view</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
-      {/* SECTION 3: TESTIMONIALS */}
+      {/* SECTION 3: CTA - I'M READY TO CHANGE MY LIFE */}
+      <section data-animate className="py-32 px-4 bg-black grid-bg">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            I'm Ready To Change My Life
+          </h2>
+
+          {/* CTA Button */}
+          <button
+            onClick={scrollToCalendly}
+            className="relative px-10 py-4 text-lg text-yellow-400 font-bold rounded-xl overflow-hidden group backdrop-blur-md"
+          >
+            {/* Liquid glass background */}
+            <span className="absolute inset-0 bg-gradient-to-br from-yellow-400/30 via-yellow-300/20 to-yellow-500/30 rounded-xl backdrop-blur-lg"></span>
+            <span className="absolute inset-0 border border-yellow-400/40 rounded-xl"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-yellow-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></span>
+            {/* Shine effect */}
+            <span className="absolute inset-0 rounded-xl overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 group-hover:translate-x-full transition-all duration-500"></span>
+            </span>
+            {/* Button text */}
+            <span className="relative flex items-center gap-2 justify-center">
+              <span>Book My Free Strategy Call</span>
+              <span className="text-xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </span>
+            {/* Glow effect */}
+            <span className="absolute inset-0 rounded-xl shadow-lg shadow-yellow-400/0 group-hover:shadow-yellow-400/50 transition-shadow duration-300"></span>
+          </button>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
+
+      {/* SECTION 4: SOCIAL PROOF - OVER 100 SUCCESSFUL CLIENTS */}
+      <section data-animate className="py-32 px-4 bg-black grid-bg">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            Over 100 Successful Clients
+          </h2>
+          <p className="text-center text-gray-400 mb-16">
+            Real clients. Real transformations. And so many more.
+          </p>
+
+          {/* Transformation Images Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Transformation Image 1 */}
+            <a
+              href="https://drive.google.com/file/d/1CooOXZYiMVEEWgfhE7JP9H2MvSZx4V4W/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer"
+            >
+              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <p className="text-sm font-semibold">Client Transformation</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Transformation Image 2 */}
+            <a
+              href="https://drive.google.com/file/d/1iK9W-IQE-211jy5sInOCBSPwfuAcOaWE/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer"
+            >
+              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <p className="text-sm font-semibold">Client Transformation</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Transformation Image 3 */}
+            <a
+              href="https://drive.google.com/file/d/1l3FjU4-6EiaJkHUiEKa_WZfVI5yhDdtt/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer"
+            >
+              <div className="aspect-square bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="text-center text-gray-400">
+                  <p className="text-sm font-semibold">Client Transformation</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
+
+      {/* SECTION 5: TESTIMONIALS */}
       <section data-animate className="py-32 px-4 bg-black grid-bg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
