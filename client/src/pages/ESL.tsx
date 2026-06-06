@@ -80,7 +80,7 @@ export default function ESL() {
             We Help Busy Men{" "}
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg -skew-x-12 opacity-25 blur-sm"></span>
-              <span className="relative text-white text-7xl md:text-8xl font-light">Transform</span>
+              <span className="relative text-white font-bold">Transform</span>
             </span>
             {" "}Their Physique
           </h1>
