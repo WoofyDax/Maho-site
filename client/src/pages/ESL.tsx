@@ -109,23 +109,7 @@ export default function ESL() {
             </div>
           </div>
 
-          {/* Hero video */}
-          <div className="relative mb-16 opacity-0 animate-fade-in" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
-              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/dBzUhEX1weI?quality=hd&vq=hd720"
-                  title="180-Day Transformation System"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
-            <p className="text-center text-gray-400 text-sm mt-4">Watch how the 180-day transformation system works</p>
-          </div>
+
 
           {/* CTA Section - Calendly Embed */}
           <div id="calendly-section" className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -183,20 +167,7 @@ export default function ESL() {
           {/* Animated Software Interface */}
           <CallBenefitsAnimation />
 
-          {/* What You'll Get - Image Cards */}
-          <div className="mt-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {/* Image Card 1 - Horizontal (Us on the Call) */}
-              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg lg:col-span-2">
-                <img src="/manus-storage/what-you-get-1_0692d769.jpg" alt="Us on the Call" className="w-full h-full object-cover aspect-video" />
-              </div>
 
-              {/* Image Card 3 - Inside the Program (Larger) */}
-              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg lg:col-span-2">
-                <img src="/manus-storage/what-you-get-3_75ea3b07.jpg" alt="Inside the Program" className="w-full h-full object-cover aspect-video" />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -248,19 +219,9 @@ export default function ESL() {
           </p>
 
           {/* Transformation Images Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Transformation Image 1 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg">
-              <img src="/manus-storage/transformation-1_6acffc9c.jpg" alt="Client Transformation 1" className="w-full h-full object-cover aspect-square" />
-            </div>
-
-            {/* Transformation Image 2 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
-              <img src="/manus-storage/transformation-2_8a0a2af6.jpg" alt="Client Transformation 2" className="w-full h-full object-cover aspect-square" />
-            </div>
-
+          <div className="grid grid-cols-1 gap-8">
             {/* Transformation Image 3 - Horizontal (Large) */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg md:col-span-2">
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
               <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover aspect-video" />
             </div>
           </div>
