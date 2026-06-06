@@ -189,19 +189,9 @@ export default function ESL() {
                 <img src="/manus-storage/what-you-get-1_0692d769.jpg" alt="Us on the Call" className="w-full h-full object-cover aspect-video" />
               </div>
 
-              {/* Image Card 2 - Coaching Service/Platform */}
-              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
-                <img src="/manus-storage/what-you-get-2_3cb6bd86.jpg" alt="Coaching Service & Platform" className="w-full h-full object-cover aspect-square" />
-              </div>
-
-              {/* Image Card 3 - Inside the Program */}
-              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
-                <img src="/manus-storage/what-you-get-3_75ea3b07.jpg" alt="Inside the Program" className="w-full h-full object-cover aspect-square" />
-              </div>
-
-              {/* Image Card 4 - Full Platform Overview */}
-              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-4 group cursor-pointer overflow-hidden rounded-lg">
-                <img src="/manus-storage/what-you-get-4_5054644f.jpg" alt="Full Platform & Call Overview" className="w-full h-full object-cover aspect-square" />
+              {/* Image Card 3 - Inside the Program (Larger) */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg lg:col-span-2">
+                <img src="/manus-storage/what-you-get-3_75ea3b07.jpg" alt="Inside the Program" className="w-full h-full object-cover aspect-video" />
               </div>
             </div>
           </div>

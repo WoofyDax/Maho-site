@@ -10,24 +10,28 @@ export function CallBenefitsAnimation() {
       description: "A clear breakdown of your current problems, what is holding you back, and exactly how we are going to solve them.",
       icon: Target,
       color: "from-yellow-400 to-yellow-600",
+      image: "/manus-storage/what-you-get-1_0692d769.jpg",
     },
     {
       title: "Full Walkthrough Of Our System",
       description: "A walkthrough of the personal system we have used to help 200+ clients build muscle, lose fat, and stay consistent.",
       icon: Zap,
       color: "from-yellow-400 to-yellow-600",
+      image: "/manus-storage/what-you-get-2_3cb6bd86.jpg",
     },
     {
       title: "Personalized Roadmap",
       description: "A custom roadmap showing you exactly how to achieve your fitness goal using a system that takes less than 3 hours per week.",
       icon: Award,
       color: "from-yellow-400 to-yellow-600",
+      image: "/manus-storage/what-you-get-3_75ea3b07.jpg",
     },
     {
       title: "Clear Next Steps",
       description: "A simple action plan so you know exactly what to do after the call.",
       icon: Check,
       color: "from-yellow-400 to-yellow-600",
+      image: "/manus-storage/what-you-get-4_5054644f.jpg",
     },
   ];
 
@@ -40,7 +44,7 @@ export function CallBenefitsAnimation() {
   }, [steps.length]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-5xl mx-auto">
       {/* Software Interface Container */}
       <div className="glass-card p-1 border-yellow-500/30 overflow-hidden grid-bg">
         <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg overflow-hidden relative">
@@ -62,8 +66,8 @@ export function CallBenefitsAnimation() {
           </div>
 
           {/* Content Area */}
-          <div className="relative z-10 p-8 md:p-12 min-h-96">
-            <div className="flex flex-col md:flex-row gap-8">
+          <div className="relative z-10 p-8 md:p-12 min-h-[500px]">
+            <div className="flex flex-col lg:flex-row gap-8">
               {/* Left: Steps List */}
               <div className="flex-1 space-y-3">
                 {steps.map((step, index) => {
@@ -107,9 +111,19 @@ export function CallBenefitsAnimation() {
                 })}
               </div>
 
-              {/* Right: Content Display */}
+              {/* Right: Content Display with Image */}
               <div className="flex-1 flex flex-col justify-center">
                 <div className="space-y-6 animate-fade-in">
+                  {/* Image Display */}
+                  <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden border border-yellow-500/30 shadow-lg shadow-yellow-500/20">
+                    <img 
+                      src={steps[activeStep].image} 
+                      alt={steps[activeStep].title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Text Content */}
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-lg shadow-yellow-600/50">
