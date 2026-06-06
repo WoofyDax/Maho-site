@@ -183,7 +183,7 @@ export default function ESL() {
 
           {/* What You'll Get - Image Cards */}
           <div className="mt-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Image Card 1 */}
               <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg">
                 <img src="/manus-storage/what-you-get-1_0692d769.jpg" alt="What You'll Get - Personalized Breakdown" className="w-full h-full object-cover aspect-square" />
@@ -256,7 +256,7 @@ export default function ESL() {
           </p>
 
           {/* Transformation Images Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Transformation Image 1 */}
             <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-1 group cursor-pointer overflow-hidden rounded-lg">
               <img src="/manus-storage/transformation-1_6acffc9c.jpg" alt="Client Transformation 1" className="w-full h-full object-cover aspect-square" />
