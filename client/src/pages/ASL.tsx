@@ -237,14 +237,17 @@ export default function ASL() {
                 {/* Expanded video content */}
                 {expandedVideo === video.id && (
                   <div className="px-6 pb-6 border-t border-yellow-500/20">
-                    <a
-                      href={video.videoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-yellow-400/50 transition-all duration-300"
-                    >
-                      Watch Video →
-                    </a>
+                    <div className="mt-4 aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://drive.google.com/file/d/${video.videoUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1]}/preview`}
+                        title={video.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                    </div>
                   </div>
                 )}
               </div>
