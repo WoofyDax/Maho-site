@@ -173,24 +173,7 @@ export default function ASL() {
       {/* SECTION 2: PREP / PROGRAM VIDEO */}
       <section id="prep-video-section" data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Watch This Video On How To Prepare
-          </h2>
-          <p className="text-center text-gray-400 mb-12">
-            Before your call, make sure you are in a quiet place, ready to talk through your goals, and prepared to be honest about where you are currently struggling.
-          </p>
 
-          {/* Video frame */}
-          <div className="glass-card p-1 mb-8">
-            <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-              <div className="w-full h-full flex items-center justify-center bg-gray-900 text-gray-400">
-                <div className="text-center">
-                  <p className="text-xl font-semibold mb-2">Prep Video Coming Soon</p>
-                  <p className="text-sm">Check back soon for the preparation video</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Preparation tips */}
           <div className="mt-12">
