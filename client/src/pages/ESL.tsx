@@ -80,12 +80,14 @@ export default function ESL() {
             We Help Busy Men{" "}
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-lg -skew-x-12 opacity-25 blur-sm"></span>
-              <span style={{ fontFamily: 'var(--font-cursive)' }} className="relative text-yellow-400 text-7xl md:text-8xl font-light underline-animated">Transform</span>
+              <span className="relative text-white text-7xl md:text-8xl font-light">Transform</span>
             </span>
-            {" "}Their Physique In{" "}
-            <span style={{ fontFamily: 'var(--font-cursive)' }} className="text-yellow-400 text-7xl md:text-8xl font-light underline-animated">180 Days</span>
+            {" "}Their Physique
           </h1>
 
+          {/* Time commitment */}
+          <p className="text-yellow-400 text-center mb-4 font-semibold">In 3 hours per week</p>
+          
           {/* Subheadline - smaller text */}
           <p className="text-sm md:text-base text-gray-400 text-center mb-12 max-w-2xl mx-auto leading-relaxed">
             Build muscle, lose fat, and create a physique you can maintain for life — with a personalized coaching system designed around your schedule.
@@ -262,100 +264,6 @@ export default function ESL() {
               <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover aspect-video" />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
-
-      {/* SECTION 5: TESTIMONIALS */}
-      <section data-animate className="py-32 px-4 bg-black grid-bg">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            Real Client Results
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="glass-card p-8 border-yellow-500/20 stagger-1 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "Down 24 lbs while working 60-hour weeks. I never thought I could maintain consistency with my schedule, but this system made it possible."
-              </p>
-              <p className="font-bold text-yellow-300">Client Testimonial</p>
-              <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="glass-card p-8 border-yellow-500/20 stagger-2 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "Finally built a plan I could actually stick to. No more guessing, just clear direction and accountability."
-              </p>
-              <p className="font-bold text-yellow-300">Client Testimonial</p>
-              <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="glass-card p-8 border-yellow-500/20 stagger-3 hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "I stopped guessing and started seeing measurable progress every week. The coaching is exactly what I needed."
-              </p>
-              <p className="font-bold text-yellow-300">Client Testimonial</p>
-              <p className="text-gray-500 text-sm">Placeholder - Replace with real testimonial</p>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-400 text-lg mb-4">
-              100+ men transformed • Results without extreme routines • Built for busy professionals
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
-
-      {/* SECTION 4: CASE STUDY VIDEO */}
-      <section data-animate className="py-32 px-4 bg-black grid-bg">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            Real Client Wins
-          </h2>
-
-          {/* Video frame */}
-          <div className="glass-card p-1 border-yellow-500/30 mb-8">
-            <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/tsLz3ohswow?start=1&quality=hd&vq=hd720"
-                title="Client Case Study"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div>
-
-          <p className="text-center text-gray-400">
-            Watch how one of our clients transformed his physique while managing a demanding career.
-          </p>
         </div>
       </section>
 

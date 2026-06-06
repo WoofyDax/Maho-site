@@ -14,7 +14,7 @@ export function CallBenefitsAnimation() {
     },
     {
       title: "Full Walkthrough Of Our System",
-      description: "A walkthrough of the personal system we have used to help 200+ clients build muscle, lose fat, and stay consistent.",
+      description: "A walkthrough of the personal system we have used to help 100+ clients build muscle, lose fat, and stay consistent.",
       icon: Zap,
       color: "from-yellow-400 to-yellow-600",
       image: "/manus-storage/what-you-get-2_3cb6bd86.jpg",
