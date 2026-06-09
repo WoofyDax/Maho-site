@@ -449,6 +449,22 @@ export default function ESL() {
                 </div>
                 <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client got big biceps and lost fat</p>
               </div>
+
+              {/* Video 13 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-1 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/zTcWwRDwdOc?quality=hd&vq=hd720"
+                    title="Client Case Study"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">Client Success Story</p>
+              </div>
             </div>
           </div>
         </div>
