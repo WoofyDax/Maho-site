@@ -222,9 +222,7 @@ export default function ESL() {
           <div className="grid grid-cols-1 gap-8 mb-8">
             {/* Transformation Image 2 - Horizontal */}
             <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-2 group cursor-pointer overflow-hidden rounded-lg">
-              <div className="w-full aspect-video md:aspect-auto overflow-hidden">
-                <img src="/manus-storage/transformation-2_cb935d11.jpg" alt="Client Transformation 2" className="w-full h-full object-cover" />
-              </div>
+              <img src="/manus-storage/transformation-2_cb935d11.jpg" alt="Client Transformation 2" className="w-full h-auto object-contain" />
             </div>
           </div>
 
@@ -232,9 +230,7 @@ export default function ESL() {
           <div className="grid grid-cols-1 gap-8">
             {/* Transformation Image 3 - Horizontal (Large) */}
             <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 stagger-3 group cursor-pointer overflow-hidden rounded-lg">
-              <div className="w-full aspect-video md:aspect-auto overflow-hidden">
-                <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-full object-cover" />
-              </div>
+              <img src="/manus-storage/transformation-3_f6622678.jpg" alt="Client Transformation 3" className="w-full h-auto object-contain" />
             </div>
           </div>
         </div>
