@@ -26,63 +26,63 @@ interface ObjectionVideo {
 const objectionVideos: ObjectionVideo[] = [
   {
     id: 1,
-    title: "What should my mindset be for the call?",
-    description: "Get in the right mindset before your strategy call.",
-    videoUrl: "https://drive.google.com/file/d/1Wl8TglVrB8fF4hnKsQQYv-2e5g-vPprm/view?usp=drive_link",
+    title: "How fast will I see results?",
+    description: "Realistic timelines for seeing transformation results.",
+    videoUrl: "https://youtu.be/HR6PKD-JDWs",
   },
   {
     id: 2,
-    title: "What if I'm with another coach?",
-    description: "How to work with us while working with other coaches.",
-    videoUrl: "https://drive.google.com/file/d/1I_rvzUCd05OHWPrNmx8_rWvLOsKf9Xqo/view?usp=drive_link",
+    title: "What are your client case studies?",
+    description: "Real results from our clients' transformations.",
+    videoUrl: "https://youtu.be/EdqsKshWgE4",
   },
   {
     id: 3,
-    title: "What if I'm not satisfied with the program?",
-    description: "Learn about our satisfaction guarantee and support.",
-    videoUrl: "https://drive.google.com/file/d/1e9OkZ-FiNBrT_4spfIp2naiYA1s46C__/view?usp=drive_link",
+    title: "What does the process look like?",
+    description: "A detailed walkthrough of our coaching process.",
+    videoUrl: "https://youtu.be/5kfXJGnUHSc",
   },
   {
     id: 4,
-    title: "Will I have time to do the program?",
-    description: "How the program fits into your busy schedule.",
-    videoUrl: "https://drive.google.com/file/d/1nqGRe6fUllWCRHtSm08AZ8jh6OboGaFB/view?usp=drive_link",
+    title: "What if I don't get the same results as your clients?",
+    description: "Understanding realistic expectations and your unique journey.",
+    videoUrl: "https://youtu.be/Sr2tq3RBwl0",
   },
   {
     id: 5,
-    title: "What if I can't get the same results as your clients?",
-    description: "Understanding realistic expectations and your unique journey.",
-    videoUrl: "https://drive.google.com/file/d/1Ua6DujsqL9wKZSNmtd3fmqWZIf0e3Zp8/view?usp=drive_link",
+    title: "What if I'm not satisfied with the program?",
+    description: "Learn about our satisfaction guarantee and support.",
+    videoUrl: "https://youtu.be/WRcpxQop12Q",
   },
   {
     id: 6,
-    title: "Will I get personalized support?",
-    description: "How we provide personalized coaching and support.",
-    videoUrl: "https://drive.google.com/file/d/1wNNPqDWCYnY6Flad188_3RBQICWrWW-u/view?usp=drive_link",
+    title: "What if I'm with another coach?",
+    description: "How to work with us while working with other coaches.",
+    videoUrl: "https://youtu.be/gkP-7sX7KXk",
   },
   {
     id: 7,
-    title: "Will I be able to afford it?",
-    description: "Understanding pricing and investment in your transformation.",
-    videoUrl: "https://drive.google.com/file/d/1shLqaXYQ0AAtNoTaluBF2sc6yOrTvCk2/view?usp=drive_link",
+    title: "What should my mindset be for the call?",
+    description: "Get in the right mindset before your strategy call.",
+    videoUrl: "https://youtu.be/DxdsF27F1bo",
   },
   {
     id: 8,
-    title: "What does the process look like?",
-    description: "A detailed walkthrough of our coaching process.",
-    videoUrl: "https://drive.google.com/file/d/1DrtzODLBOirWaXBLpgceNTphPXCsU8md/view?usp=drive_link",
+    title: "Will I be able to afford it?",
+    description: "Understanding pricing and investment in your transformation.",
+    videoUrl: "https://youtu.be/iZw0btmKW3Y",
   },
   {
     id: 9,
-    title: "How fast will I see results?",
-    description: "Realistic timelines for seeing transformation results.",
-    videoUrl: "https://drive.google.com/file/d/14UTdEYPtzrDCqkmJvDTftO2KdGVrvWsW/view?usp=drive_link",
+    title: "Will I get personalized support?",
+    description: "How we provide personalized coaching and support.",
+    videoUrl: "https://youtu.be/xA0JvOB7nQ0",
   },
   {
     id: 10,
-    title: "What are your client case studies?",
-    description: "Real results from our clients' transformations.",
-    videoUrl: "https://drive.google.com/file/d/18wqpLQXSTvB5CZxMB4tx2I9cZYXAVLm0/view?usp=drive_link",
+    title: "Will I have time to do the program?",
+    description: "How the program fits into your busy schedule.",
+    videoUrl: "https://youtu.be/58MwRglr8Gg",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function ASL() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://drive.google.com/file/d/1or5jziOgukJC1ct7jJik7TfRO_J9TxIq/preview"
+                  src="https://www.youtube.com/embed/CvT4X-0pGbU"
                   title="How to Prepare for This Call"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -239,7 +239,10 @@ export default function ASL() {
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h3 className="font-bold text-lg text-white mb-2">{video.title}</h3>
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-yellow-400 text-lg font-bold">•</span>
+                        <h3 className="font-bold text-lg text-white">{video.title}</h3>
+                      </div>
                       <p className="text-gray-400 text-sm">{video.description}</p>
                     </div>
                     <ChevronDown
@@ -257,7 +260,7 @@ export default function ASL() {
                       <iframe
                         width="100%"
                         height="100%"
-                        src={`https://drive.google.com/file/d/${video.videoUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1]}/preview`}
+                        src={`https://www.youtube.com/embed/${video.videoUrl.match(/youtu\.be\/([a-zA-Z0-9-_]+)/)?.[1]}`}
                         title={video.title}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
