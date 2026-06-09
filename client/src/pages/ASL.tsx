@@ -285,42 +285,10 @@ export default function ASL() {
             Real clients. Real transformations.
           </p>
 
-          {/* Featured case study videos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {/* Case Study Videos Grid - First 6 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {/* Video 1 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
-              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/dI_c-D81x-A?quality=hd&vq=hd720"
-                  title="How our client David went from 20% body fat to 9%"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client David went from 20% body fat to 9% and got abs in ONE month under Malex Coaching</p>
-            </div>
-
-            {/* Video 2 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
-              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/ZkyrMRfuXk4?quality=hd&vq=hd720"
-                  title="DOWN 20 LBS IN 30 DAYS"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">DOWN 20 LBS IN 30 DAYS — Ryan's Journey</p>
-            </div>
-
-            {/* Video 3 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-1 group">
               <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 <iframe
                   width="100%"
@@ -335,8 +303,8 @@ export default function ASL() {
               <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our 50-year-old client lost all the fat and increased his confidence by x100 in less than a year</p>
             </div>
 
-            {/* Video 4 */}
-            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+            {/* Video 2 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-2 group">
               <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
                 <iframe
                   width="100%"
@@ -349,6 +317,188 @@ export default function ASL() {
                 ></iframe>
               </div>
               <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client Lamar got a six-pack in half a year</p>
+            </div>
+
+            {/* Video 3 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-3 group">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dI_c-D81x-A?quality=hd&vq=hd720"
+                  title="How our client David went from 20% body fat to 9%"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client David went from 20% body fat to 9% and got abs in ONE month under Malex Coaching</p>
+            </div>
+
+            {/* Video 4 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-4 group">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ZkyrMRfuXk4?quality=hd&vq=hd720"
+                  title="DOWN 20 LBS IN 30 DAYS"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">DOWN 20 LBS IN 30 DAYS — Ryan's Journey</p>
+            </div>
+
+            {/* Video 5 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-1 group">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/7jFHJ7AD_ew?quality=hd&vq=hd720"
+                  title="How our client Mark got rid of his chronic joint pain"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client Mark got rid of his chronic joint pain without a doctor at 65 years old</p>
+            </div>
+
+            {/* Video 6 */}
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-2 group">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/s5xMQScpPM8?quality=hd&vq=hd720"
+                  title="How our client Andrey lost his beer belly"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client Andrey lost his beer belly and got a defined jaw as a busy working 9-5 man</p>
+            </div>
+          </div>
+
+          {/* More Client Wins - Additional 7 Videos */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-center mb-8 text-yellow-400">More Client Wins</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Video 7 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-3 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/9czxkZ8H01w?quality=hd&vq=hd720"
+                    title="BUILT MUSCLE AND GOT ABS"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">BUILT MUSCLE AND GOT ABS — Humza Case Study</p>
+              </div>
+
+              {/* Video 8 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-4 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/c3eYA_Jl8ro?quality=hd&vq=hd720"
+                    title="Client loses 19kg"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">Client loses 19kg</p>
+              </div>
+
+              {/* Video 9 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-1 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/zYpu4rwTvac?quality=hd&vq=hd720"
+                    title="How our client went from skinny to muscular"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client went from skinny to muscular</p>
+              </div>
+
+              {/* Video 10 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-2 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/ipEZpc9lUWI?quality=hd&vq=hd720"
+                    title="Don't watch this if you don't want to be skinny anymore"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">Don't watch this if you don't want to be skinny anymore</p>
+              </div>
+
+              {/* Video 11 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-3 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/kBrZj-LJHy8?quality=hd&vq=hd720"
+                    title="How to regain your confidence as a skinny guy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How to regain your confidence as a skinny guy</p>
+              </div>
+
+              {/* Video 12 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-4 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/F6k0vK3xxGc?quality=hd&vq=hd720"
+                    title="How our client got big biceps and lost fat"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">How our client got big biceps and lost fat</p>
+              </div>
+
+              {/* Video 13 */}
+              <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300 stagger-1 group">
+                <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/zTcWwRDwdOc?quality=hd&vq=hd720"
+                    title="Client Case Study"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <p className="text-center text-gray-300 text-sm mt-4 px-4 pb-4">Client Success Story</p>
+              </div>
             </div>
           </div>
         </div>
