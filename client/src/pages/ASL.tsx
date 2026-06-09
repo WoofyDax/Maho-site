@@ -26,63 +26,63 @@ interface ObjectionVideo {
 const objectionVideos: ObjectionVideo[] = [
   {
     id: 1,
-    title: "Will this work for me?",
-    description: "Learn how our system adapts to your unique situation and goals.",
-    videoUrl: "https://drive.google.com/file/d/14UTdEYPtzrDCqkmJvDTftO2KdGVrvWsW/view?usp=sharing",
+    title: "What should my mindset be for the call?",
+    description: "Get in the right mindset before your strategy call.",
+    videoUrl: "https://drive.google.com/file/d/1Wl8TglVrB8fF4hnKsQQYv-2e5g-vPprm/view?usp=drive_link",
   },
   {
     id: 2,
-    title: "I don't have enough time.",
-    description: "Discover how busy professionals fit this into their schedule.",
-    videoUrl: "https://drive.google.com/file/d/18wqpLQXSTvB5CZxMB4tx2I9cZYXAVLm0/view?usp=sharing",
+    title: "What if I'm with another coach?",
+    description: "How to work with us while working with other coaches.",
+    videoUrl: "https://drive.google.com/file/d/1I_rvzUCd05OHWPrNmx8_rWvLOsKf9Xqo/view?usp=drive_link",
   },
   {
     id: 3,
-    title: "I've tried programs before.",
-    description: "See what makes our approach different from other coaching programs.",
-    videoUrl: "https://drive.google.com/file/d/1DrtzODLBOirWaXBLpgceNTphPXCsU8md/view?usp=sharing",
+    title: "What if I'm not satisfied with the program?",
+    description: "Learn about our satisfaction guarantee and support.",
+    videoUrl: "https://drive.google.com/file/d/1e9OkZ-FiNBrT_4spfIp2naiYA1s46C__/view?usp=drive_link",
   },
   {
     id: 4,
-    title: "What if I'm too busy?",
-    description: "How our system works specifically for demanding schedules.",
-    videoUrl: "https://drive.google.com/file/d/1I_rvzUCd05OHWPrNmx8_rWvLOsKf9Xqo/view?usp=sharing",
+    title: "Will I have time to do the program?",
+    description: "How the program fits into your busy schedule.",
+    videoUrl: "https://drive.google.com/file/d/1nqGRe6fUllWCRHtSm08AZ8jh6OboGaFB/view?usp=drive_link",
   },
   {
     id: 5,
-    title: "How does the coaching actually work?",
-    description: "A detailed walkthrough of our coaching process and support.",
-    videoUrl: "https://drive.google.com/file/d/1Ua6DujsqL9wKZSNmtd3fmqWZIf0e3Zp8/view?usp=sharing",
+    title: "What if I can't get the same results as your clients?",
+    description: "Understanding realistic expectations and your unique journey.",
+    videoUrl: "https://drive.google.com/file/d/1Ua6DujsqL9wKZSNmtd3fmqWZIf0e3Zp8/view?usp=drive_link",
   },
   {
     id: 6,
-    title: "What if I don't know where to start?",
-    description: "We guide you through the entire process step by step.",
-    videoUrl: "https://drive.google.com/file/d/1Wl8TglVrB8fF4hnKsQQYv-2e5g-vPprm/view?usp=sharing",
+    title: "Will I get personalized support?",
+    description: "How we provide personalized coaching and support.",
+    videoUrl: "https://drive.google.com/file/d/1wNNPqDWCYnY6Flad188_3RBQICWrWW-u/view?usp=drive_link",
   },
   {
     id: 7,
-    title: "What kind of results can I expect?",
-    description: "Real results and timelines from our clients.",
-    videoUrl: "https://drive.google.com/file/d/1e9OkZ-FiNBrT_4spfIp2naiYA1s46C__/view?usp=sharing",
+    title: "Will I be able to afford it?",
+    description: "Understanding pricing and investment in your transformation.",
+    videoUrl: "https://drive.google.com/file/d/1shLqaXYQ0AAtNoTaluBF2sc6yOrTvCk2/view?usp=drive_link",
   },
   {
     id: 8,
-    title: "Why should I take action now?",
-    description: "Why taking action today matters for your transformation.",
-    videoUrl: "https://drive.google.com/file/d/1nqGRe6fUllWCRHtSm08AZ8jh6OboGaFB/view?usp=sharing",
+    title: "What does the process look like?",
+    description: "A detailed walkthrough of our coaching process.",
+    videoUrl: "https://drive.google.com/file/d/1DrtzODLBOirWaXBLpgceNTphPXCsU8md/view?usp=drive_link",
   },
   {
     id: 9,
-    title: "What makes this different?",
-    description: "See what sets our coaching apart from other programs.",
-    videoUrl: "https://drive.google.com/file/d/1shLqaXYQ0AAtNoTaluBF2sc6yOrTvCk2/view?usp=sharing",
+    title: "How fast will I see results?",
+    description: "Realistic timelines for seeing transformation results.",
+    videoUrl: "https://drive.google.com/file/d/14UTdEYPtzrDCqkmJvDTftO2KdGVrvWsW/view?usp=drive_link",
   },
   {
     id: 10,
-    title: "What happens after the call?",
-    description: "Understand the next steps if you decide to work with us.",
-    videoUrl: "https://drive.google.com/file/d/1wNNPqDWCYnY6Flad188_3RBQICWrWW-u/view?usp=sharing",
+    title: "What are your client case studies?",
+    description: "Real results from our clients' transformations.",
+    videoUrl: "https://drive.google.com/file/d/18wqpLQXSTvB5CZxMB4tx2I9cZYXAVLm0/view?usp=drive_link",
   },
 ];
 
@@ -173,7 +173,23 @@ export default function ASL() {
       {/* SECTION 2: PREP / PROGRAM VIDEO */}
       <section id="prep-video-section" data-animate className="py-32 px-4 bg-black">
         <div className="max-w-4xl mx-auto">
-
+          {/* Prep video */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">How to Prepare for This Call</h3>
+            <div className="glass-card p-1 border-yellow-500/30 hover:border-yellow-500/50 transition-all duration-300">
+              <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://drive.google.com/file/d/1or5jziOgukJC1ct7jJik7TfRO_J9TxIq/preview"
+                  title="How to Prepare for This Call"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
 
           {/* Preparation tips */}
           <div className="mt-12">
