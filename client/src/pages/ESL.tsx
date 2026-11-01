@@ -240,7 +240,7 @@ export default function ESL() {
       <div className="h-px bg-gradient-to-r from-transparent via-yellow-600/30 to-transparent"></div>
 
       {/* SECTION 4: CLIENT CASE STUDIES */}
-      <section data-animate className="py-32 px-4 bg-black grid-bg">
+      <section data-animate className="client-results-section py-32 px-4 bg-black grid-bg">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -351,7 +351,7 @@ export default function ESL() {
           </div>
 
           {/* More Client Wins - Additional 6 Videos */}
-          <div className="mb-12">
+          <div className="client-results-more mb-12">
             <h3 className="text-2xl font-bold text-center mb-8 text-yellow-400">More Client Wins</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Video 7 */}
@@ -511,6 +511,16 @@ export default function ESL() {
       {/* Footer */}
       <footer className="bg-gray-950 py-8 px-4 border-t border-gray-800">
         <div className="max-w-5xl mx-auto text-center text-gray-500 text-sm">
+          <p className="mb-1">Contact us for support</p>
+          <a href="mailto:maho@malexcoaching.com" className="inline-block text-gray-300 hover:text-yellow-400 transition-colors mb-2">
+            maho@malexcoaching.com
+          </a>
+          <nav className="mb-3 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <a href="/terms-of-service" className="hover:text-yellow-400 transition-colors">Terms of Service</a>
+            <a href="/refund-policy" className="hover:text-yellow-400 transition-colors">Refund Policy</a>
+            <a href="/privacy-policy" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
+            <a href="/contact" className="hover:text-yellow-400 transition-colors">Contact Us</a>
+          </nav>
           <p>© 2026 Malex Coaching. All rights reserved.</p>
         </div>
       </footer>

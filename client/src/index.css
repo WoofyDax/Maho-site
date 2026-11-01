@@ -250,6 +250,29 @@
     border-color: rgba(251, 191, 36, 0.4);
   }
 
+  /* Keep the case-study grid easy to scan when captions have different lengths. */
+  .client-results-section .glass-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem;
+  }
+
+  .client-results-section .glass-card > p {
+    flex: 1;
+    margin: 0;
+    padding: 1rem 0.75rem 0.75rem;
+    border-top: 1px solid rgba(251, 191, 36, 0.14);
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .client-results-more {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(251, 191, 36, 0.16);
+  }
+
   /* Radial gold glow */
   .gold-glow {
     position: relative;
