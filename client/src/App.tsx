@@ -6,7 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ESL from "./pages/ESL";
 import ASL from "./pages/ASL";
-import { ContactPage, PrivacyPolicy, RefundPolicy, TermsOfService } from "./pages/Legal";
+import { ContactPage, TermsOfService, RefundPolicy, PrivacyPolicy } from "./pages/Legal";
 
 
 function Router() {
